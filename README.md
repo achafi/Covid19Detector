@@ -20,7 +20,7 @@
 web application that provides an automated diagnosis of COVID-19 from chest X-ray image. A Deep Convolutional Neural Network model to automatically detect COVID-19 infection from chest X-ray images. The proposed model is based on Xception architecture pre-trained on ImageNet dataset and trained end-to-end on a dataset prepared by collecting COVID-19 and other chest pneumonia X-ray images from two different publically available databases.
 the proposed model produced a classification accuracy of 95%. The preliminary results of this study look promising which can be further improved as more training data becomes available.
 
-Check out the live demo: ....
+
 Link to this project report with youtube demo: https://achafi.github.io/myportfolio/xray-covid-detection/
 
 #### Machine Learning algorithms
