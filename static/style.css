@@ -1,0 +1,203 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/static/covid_background.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+.chart{
+    width: 2000px;
+    height: 300px;
+    display: block;
+}
+  
+.numbers{
+    color: #555;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 100%;
+    display: inline-block;
+
+}
+  
+.numbers li{
+    list-style: none;
+    height: 150px;
+    position: relative;
+    bottom: 145px;
+}
+  
+.numbers span{
+    color : #555;
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+  
+.bars{
+    color: #555;
+    font-size: 12px;
+    font-weight: 600;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 1000px;
+    height: 300px;
+    box-shadow: 0 0 10px 0 #555;
+    border-radius: 5px;
+}
+  
+.bars li{
+    display: table-cell;
+    width: 100px;
+    height: 300px;
+    position: relative;
+}
+  
+.bars span{
+    width: 100%;
+    position: absolute;
+    bottom: -30px;
+    text-align: center;
+}
+  
+.bars .bar{
+    display: block;
+    background: #17C0EB;
+    width: 50px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 25px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(23, 192, 235, 0.5);
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+}
+  
+.bars .bar:hover{
+    background: #55EFC4;
+    box-shadow: 0 0 10px 0 rgba(85, 239, 196, 0.5);
+    cursor: pointer;
+  }
+  
+.bars .bar:before{
+    color: #555;
+    content: attr(data-percentage) '%';
+    position: relative;
+    bottom: 20px;
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* */
+  

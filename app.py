@@ -23,7 +23,7 @@ def predict_covid(imageToTest):
 
 @app.route('/')
 def index():
-    return render_template("image-classification-index.html")
+    return render_template("home.html")
 
 @app.route('/upload-image', methods=['POST'])
 def uploadImage():

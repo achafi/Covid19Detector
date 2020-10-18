@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<title>X-ray Covid diagnostic</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Required Stylesheet -->
+<link rel="stylesheet" href="dist/css/jquery.simple-bar-graph.min.css" />
+<!-- Required JavaScript -->
+<script src="/path/to/cdn/jquery.min.js"></script>
+<script src="dist/js/jquery.simple-bar-graph.min.js"></script>
+<link rel="stylesheet" href="/static/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="https://github.com/achafi/Covid19Detector" class="w3-bar-item w3-button w3-wide">Github Repository</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+     
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Get instant Covid-19 test results</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Get instant Covid-19 test results</span><br>
+    <form action="upload-image" method="post" enctype="multipart/form-data">
+        <input type='file' name='image' class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"/>
+        <br>
+        <input type='submit' class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off" value='Start testing'/>
+    </form>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <a href=""><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+  </div>
+</header>
+
+
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>About the application</h3>
+      <p>The application provides an accurate diagnosis of COVID-19 from chest X-ray images based on AI technologies.<br></p>
+      <p><a href="https://achafi.github.io/myportfolio/xray-covid-detection/" class="w3-button w3-black"><i class="fa fa-th"> </i>Learn more</a></p>
+    </div>
+    <div class="w3-col m6">
+      
+    </div>
+  </div>
+</div>
+
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+    <h3 class="w3-center">ABOUT THE Application</h3>
+    <p class="w3-center w3-large">Key features of our application</p>
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+      <div class="w3-quarter">
+        <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+        <p class="w3-large">Time saving</p>
+        <p>......</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">Life saving</p>
+        <p>......</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">Money saving</p>
+        <p>.......</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">99% Accurate results</p>
+        <p>.......</p>
+      </div>
+      <div>
+        <p><a href="https://achafi.github.io/myportfolio/xray-covid-detection/" class="w3-button w3-black"><i class="fa fa-th"> </i>Learn more</a></p>
+      </div>
+    </div>
+  </div>
+ 
+
+<!-- Work Section -->
+<div class="w3-container" style="padding:128px 16px" id="work">
+  <h3 class="w3-center">My WORK</h3>
+  <p class="w3-center w3-large">What i've done</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <!--FaceMaskDectionAlertSystem-->
+    <div class="w3-col l3 m6">
+      <label>Face Mask Alert System</label>
+      <img src="/static/work/face_mask.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Face Mask Alert System">
+    </div>
+    <!--Movie Recommendation System-->
+    <div class="w3-col l3 m6">
+      <label>Movie Recommendation System<label>
+      <img src="/static/work/movie.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
+    </div>
+     <!--Auto-MPG-Prediction-->
+     <div class="w3-col l3 m6">
+        <label>Auto MPG prediction</label>
+        <img src="/static/work/mpg.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
+      </div>
+    <!--flightfareprediction-->
+    <div class="w3-col l3 m6">
+      <label>Flight fare prediction</label>
+      <img src="/static/work/flight.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <!--forest-->
+    <div class="w3-col l3 m6">
+      <label>Fire forest prediction</label>
+      <img src="/static/work/forest.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
+    </div>
+    <!--BankNoteAuthentication-->
+    <div class="w3-col l3 m6">
+      <label>Bank note authentication</label>
+      <img src="/static/work/banknote.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
+    </div>
+    <!--Creditcardfrauddetection-->
+    <div class="w3-col l3 m6">
+        <label>Credit Card Fraud detection</label>
+        <img src="/static/work/credictcard.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
+    </div>
+    <!--housepricePrediction-->
+    <div class="w3-col l3 m6">
+      <label>House price prediction</label>
+      <img src="/static/work/house.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal for full size images on click-->
+
+
+<!-- Skills Section -->
+<div class="w3-container w3-light-grey w3-padding-64">
+  <div class="w3-row-padding">
+    <div>
+      <h3>My Skills.</h3>
+      <p>Stuff I'm good at.</p>
+      <p>A bar chart to visualize my tech skills, and proficiency levels.</p>
+    </div>
+    <br>
+    <div>
+        <p class="w3-wide"><i class="fa fa-bar-chart w3-margin-right"></i>Data Science</p>
+        <div>
+           <!--chart start-->
+           <div>
+              <div class="chart">
+                   <ul class="numbers">
+                      <li><span>100%</span></li>
+                      <li><span>50%</span></li>
+                      <li><span>0%</span></li>
+                  </ul>
+                  <ul class="bars">
+                      <li><div class="bar" data-percentage="80"></div><span>Python</span></li>
+                      <li><div class="bar" data-percentage="30"></div><span>R</span></li>
+                      <li><div class="bar" data-percentage="70"></div><span>Pandas</span></li>
+                      <li><div class="bar" data-percentage="80"></div><span>Numpy</span></li>
+                      <li><div class="bar" data-percentage="80"></div><span>Ml Algorithms</span></li>
+                      <li><div class="bar" data-percentage="80"></div><span>SQL/NoSql</span></li>
+                      <li><div class="bar" data-percentage="80"></div><span>Sckit-learn</span></li>
+                      <li><div class="bar" data-percentage="80"></div><span>Statistics</span></li>
+                  </ul>
+                  
+              </div>
+          </div>
+          <!--chart end-->
+    </div>
+   
+      <br>
+    <div>
+      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Software Dev</p>
+      
+      <div>
+         <!--chart start-->
+         <div>
+            <div class="chart">
+                 <ul class="numbers">
+                    <li><span>100%</span></li>
+                    <li><span>50%</span></li>
+                    <li><span>0%</span></li>
+                </ul>
+            
+                <ul class="bars">
+                    <li><div class="bar" data-percentage="70"></div><span>HTML</span></li>
+                    <li><div class="bar" data-percentage="70"></div><span>CSS</span></li>
+                    <li><div class="bar" data-percentage="50"></div><span>JS/Jquery</span></li>
+                    <li><div class="bar" data-percentage="30"></div><span>Bootstrap</span></li>
+                    <li><div class="bar" data-percentage="70"></div><span>Python</span></li>
+                    <li><div class="bar" data-percentage="50"></div><span>.Net</span></li>
+                    <li><div class="bar" data-percentage="30"></div><span>C/C++</span></li>
+                    <li><div class="bar" data-percentage="70"></div><span>SQL/NoSql</span></li>
+                </ul>
+            </div>
+         </div>
+            <!--chart end-->
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Pricing Section -->
+
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://achafi.github.io/myportfolio/about/" title="Assia CHAFI" target="_blank" class="w3-hover-text-green">Assia CHAFI</a></p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+<script type="text/javascript">
+    $(function(){
+      $('.bars li .bar').each(function(key, bar){
+        var percentage = $(this).data('percentage');
+        $(this).animate({
+          'height' : percentage + '%'
+        },1000);
+      });
+    });
+</script>
+
+</body>
+</html>
