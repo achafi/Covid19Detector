@@ -1,18 +1,28 @@
-from flask import Flask, request,redirect, Response, render_template
+from flask import Flask, request,redirect, Response, render_template, flash, session
 from tensorflow.keras.models import load_model
 import cv2
 import os
 import numpy as np
 from werkzeug.utils import secure_filename
+from flask_mail import Mail, Message
 
 
 
-PEOPLE_FOLDER = "C:/Users/post/Desktop/ML_projects/COVID-19 X-RayCNN/Covid19Detector/static/xrayimage"
-ALLOWED_IMAGE_EXTENSIONS = ["JPG", "PNG", "JPEG"]
 # Creating a Python App running on Flask Server
 app = Flask(__name__)
+PEOPLE_FOLDER = "C:/Users/post/Desktop/ML_projects/COVID-19 X-RayCNN/Covid19Detector/static/xrayimage"
+ALLOWED_IMAGE_EXTENSIONS = ["JPG", "PNG", "JPEG"]
+app.secret_key = "dont tell anyone"
+app.config.from_pyfile('config.cfg')
+
 app.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
 app.config['ALLOWED_IMAGE_EXTENSIONS'] = ALLOWED_IMAGE_EXTENSIONS
+
+
+
+mail = Mail(app)
+
+
 
 
 
@@ -60,14 +70,16 @@ def uploadImage():
             
             # Errors Handling
             if file.filename == "":
-                Error = "Image must have filename !"
-                return render_template("home.html", error = Error)
+                print("ok")
+                flash("Image must have filename !", 'error')
+                return redirect("/")
             
             elif not allowed_image(file.filename) :
-                Error = "The image extension is not allowed !"
-                return render_template('home.html', error = Error)
+                flash("The image extension is not allowed !", 'error')
+                return redirect("/")
             
-            else:
+            else :
+                
                 filename = secure_filename(file.filename)
                 path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         
@@ -77,12 +89,30 @@ def uploadImage():
                 # predict the image class
                 label = predict_covid(path)
                 return render_template('image-classification-result.html', user_image = filename, name=label)
+    
 
-    return redirect("/")            
+"""   
+
+@app.route('/send_message', methods=['POST', 'GET'])
+def send_message():
+    if request.method == "POST":
+        name = request.form['Name']
+        Email = request.form['Email']
+        message = name + "\n" + Email +"\n"+ request.form['Message']
+        #msg = Message(message, sender=['assia.chafii93@gmail.com'], recipients=['assia.chafii93@gmail.com'])
+        msg = Message('Hello', sender = 'assia.chafii93@gmail.com', recipients = ['assia.chafii93@gmail.com'])
+        msg.body = message
+        mail.send(msg)
+        flash('Message sent! Thank you :)', 'info')
+        return redirect("/")
         
+    return redirect("/")
+"""
 
 
 if __name__ == '__main__':
+
+
     app.debug = True
     app.run()
     

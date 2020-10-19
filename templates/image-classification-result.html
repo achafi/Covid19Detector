@@ -20,20 +20,44 @@ body, html {height: 100%}
 </style>
 <body>
 
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="https://github.com/achafi/Covid19Detector" class="w3-bar-item w3-button w3-wide">Github Repository</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+     
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white" id = "home">
   <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    Logo
   </div>
-
   <div class="w3-container">
     <div class="w3-card" style="width:50%">
       <img  src = "/static/xrayimage/{{user_image }}" alt="user image" style="width:100%">
       <div class="w3-container">
         <h4><b>RESULTS FOR XRAY IMAGE: {{name}}</b></h4>
-        <a href="/" class="previous">&laquo; Previous</a>
+        <br>
+        <div>
+          <a href="/" class="previous">&laquo; Previous</a>
+        </div>
+       
       </div>
     </div>
     <br>
+   
+    <br>
+    <div class="w3-display-bottomleft w3-padding-large">
+      Powered by <a href="https://achafi.github.io/myportfolio/about/" target="_blank">Assia CHAFI</a>
+    </div>
   </div>
  
   
@@ -41,9 +65,7 @@ body, html {height: 100%}
 
 
 <footer>
-  <div class="w3-display-bottomleft w3-padding-large">
-    Powered by <a href="https://achafi.github.io/myportfolio/about/" target="_blank">Assia CHAFI</a>
-  </div>
+
 </footer>
 </body>
 </html>
