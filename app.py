@@ -66,11 +66,9 @@ def uploadImage():
         if request.files:
             file = request.files['image']
             
-            print(file.filename)
-            
             # Errors Handling
             if file.filename == "":
-                print("ok")
+                
                 flash("Image must have filename !", 'error')
                 return redirect("/")
             

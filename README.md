@@ -4,7 +4,8 @@
 ![Framework](https://img.shields.io/badge/Framework-Flask-red)
 ![Frontend](https://img.shields.io/badge/Frontend-HTML/CSS/JS-green)
 
-![image info](index.PNG)
+![image info](home_capture.PNG)
+![image info](test_result_capture.PNG)
 
 ---
 
