@@ -28,7 +28,7 @@ the proposed model produced a classification accuracy of 98%. The preliminary re
 
 #### Machine Learning algorithms
 - Convolutional neural network
-[!CNN Architecture](cnn_architecture.png)
+![CNN Architecture](cnn_architecture.png)
 
 #### Sources of the datasets
 - [Kaggle : Chest X-Ray Images (Pneumonia) ](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia?)
