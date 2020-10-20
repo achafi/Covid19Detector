@@ -9,7 +9,7 @@ from flask_mail import Mail, Message
 
 
 # Creating a Python App running on Flask Server
-app = Flask(__name__)
+app = Flask("covid_detector")
 PEOPLE_FOLDER = "C:/Users/post/Desktop/ML_projects/COVID-19 X-RayCNN/Covid19Detector/static/xrayimage"
 ALLOWED_IMAGE_EXTENSIONS = ["JPG", "PNG", "JPEG"]
 app.secret_key = "dont tell anyone"

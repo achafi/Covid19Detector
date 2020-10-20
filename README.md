@@ -1,8 +1,9 @@
 # COVID-19 detector system based on X-Ray images
 
-![Python](https://img.shields.io/badge/Python-3.8-blueviolet)
+![Python](https://img.shields.io/badge/Python-3.8-blue)
 ![Framework](https://img.shields.io/badge/Framework-Flask-red)
 ![Frontend](https://img.shields.io/badge/Frontend-HTML/CSS/Bootstrap/JS/Jquery-green)
+![deployment](https://img.shields.io/badge/Herokugunicorn-blueviolet)
 
 ![image info](home_capture.PNG)
 ![image info](test_result_capture.PNG)
@@ -62,6 +63,7 @@ Login or signup in order to create virtual app. You can either connect your gith
 │   ├── home.html
 |   |── image-classification-result.html
 ├── Procfile
+├── wsgi.py
 ├── README.md
 ├── app.py
 ├── config.cfg
