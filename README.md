@@ -14,7 +14,7 @@
 - [Description](#Description)
 - [How To Use](#how-to-use)
 - [Directory Tree](#Directory-Tree)
-- [Bug Feature Request](#Bug-Feature-Request)
+- [Bug Or Feature Request](#Bug-Or-Feature-Request)
 - [Future Scope](#Future-Scope)
 - [References](#references)
 ---
@@ -71,7 +71,7 @@ Login or signup in order to create virtual app. You can either connect your gith
 ├── requirements.txt
 ```
 ---
-## Bug / Feature Request
+## Bug or Feature Request
 
 If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an [issue](https://github.com/achafi/Covid19Detector/issues) here by including your search query and the expected result
 
@@ -87,14 +87,11 @@ If you find a bug (the website couldn't handle the query and / or gave undesired
 * Optimize Flask app.py
 * Add Features
 
-<br>
-
 [Back To The Top](#COVID-19-detector-system-based-on-X-Ray-images)
+
 ---
 
 ## References
 . [CoroNet: A deep neural network for detection and diagnosis of COVID-19 from chest x-ray images](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7274128/)
-
-<br>
 
 [Back To The Top](#COVID-19-detector-system-based-on-X-Ray-images)
