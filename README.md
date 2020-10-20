@@ -62,12 +62,16 @@ Login or signup in order to create virtual app. You can either connect your gith
 ├── template
 │   ├── home.html
 |   |── image-classification-result.html
+├── model_files
+|   ├── dataset_creator.ipynb
+|   ├── model.h5
+|   ├── xray_image_classification.ipynb
 ├── Procfile
 ├── wsgi.py
 ├── README.md
 ├── app.py
 ├── config.cfg
-├── dataSet_creator.ipynb
+├── dataset_creator.ipynb
 ├── Xray_Image_Classification.ipynb
 ├── model.h5
 ├── requirements.txt

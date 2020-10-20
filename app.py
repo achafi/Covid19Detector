@@ -28,7 +28,7 @@ def predict_covid(imageToTest):
         Takes in an image and returns label : "Positive (Covid-19 infected)" or "Negative"
     """
     
-    model = load_model("model.h5")
+    model = load_model("model_files/model.h5")
     model.compile(optimizer='adam', loss="binary_crossentropy", metrics=['accuracy'])
     image = cv2.imread(imageToTest)
     image = cv2.resize(image, (64,64))
