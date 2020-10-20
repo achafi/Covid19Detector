@@ -23,11 +23,9 @@ app.config['ALLOWED_IMAGE_EXTENSIONS'] = ALLOWED_IMAGE_EXTENSIONS
 mail = Mail(app)
 
 
-
-
-
 def predict_covid(imageToTest):
     """
+        Takes in an image and returns label : "Positive (Covid-19 infected)" or "Negative"
     """
     
     model = load_model("model.h5")
@@ -90,7 +88,7 @@ def uploadImage():
     
 
 """   
-
+# Send Email via send message button
 @app.route('/send_message', methods=['POST', 'GET'])
 def send_message():
     if request.method == "POST":

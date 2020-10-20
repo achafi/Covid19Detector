@@ -23,7 +23,7 @@ body, html {
 }
   
 .numbers{
-    color: #555;
+    color: #fff;
     margin: 0;
     padding: 0;
     width: 50px;
@@ -96,8 +96,7 @@ body, html {
   }
   
 .bars .bar:before{
-    color: #555;
-    content: attr(data-percentage) '%';
+    color: #fff;
     position: relative;
     bottom: 20px;
 }
